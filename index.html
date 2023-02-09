@@ -11,8 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
 </head>
-<body>
+<body class="theme-dark ">
 
   <!--Header with Logo and Burger Menu-->
   <header class="header">
@@ -216,19 +220,91 @@
           <li class="skills-list-element"><div class="list-circle"><img src="img/postgreSQL.svg" alt="PostgreSQL"></div></li>
           <li class="skills-list-element"><div class="list-circle"><img src="img/figma.svg" alt="Figma"></div></li>
           <li class="skills-list-element"><div class="list-circle"><img src="img/photoshop.svg" alt="Photoshop"></div></li>
-
-        </ul>
-            
+        </ul> 
      </section>
-     <!--End About-->
+     <!--End Skills-->
+
+    <!--Section Projects-->
+    <section class="projects">
+      <h2 class="title">Portfolio</h2> 
+      
+      <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-element element-1">
+              <div class="projects-element-header">
+                <span class="project-number">01</span>
+                <span class="project-name">Portfolio Laurie</span>
+              </div>
+              <img src="img/portfolio_laurie.jpg" alt="Projet Portfolio Laurie">
+              <button type="button">View Project</button>
+              <a href="#">View on Github</a>
+              <ul class="project-langage">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-element element-2">
+              <div class="projects-element-header">
+                <span class="project-number">02</span>
+                <span class="project-name">Portfolio Laurie</span>
+              </div>
+              <img src="img/portfolio_laurie.jpg" alt="Projet Portfolio Laurie">
+              <button type="button">View Project</button>
+              <a href="#">View on Github</a>
+              <ul class="project-langage">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-slide"> 
+            <div class="project-element element-3">
+            <div class="projects-element-header">
+              <span class="project-number">01</span>
+              <span class="project-name">Portfolio Laurie</span>
+            </div>
+            <img src="img/portfolio_laurie.jpg" alt="Projet Portfolio Laurie">
+            <button type="button">View Project</button>
+            <a href="#">View on Github</a>
+            <ul class="project-langage">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div></div>
+          <div class="swiper-slide"> <div class="project-element">
+            <div class="projects-element-header">
+              <span class="project-number">01</span>
+              <span class="project-name">Portfolio Laurie</span>
+            </div>
+            <img src="img/portfolio_laurie.jpg" alt="Projet Portfolio Laurie">
+            <button type="button">View Project</button>
+            <a href="#">View on Github</a>
+            <ul class="project-langage">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div></div>
+        </div>
+      </div>  
+    </section>
+    <!--End Projects-->
 
   </main>
 
+  <div class="download-cv">CV</div>
   <footer>
     <div class="copyright">© Laurie Musson - Portfolio</div>
   </footer>
 
 
   <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
