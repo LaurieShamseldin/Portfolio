@@ -9,16 +9,16 @@ const app = {
   const burgerMenu = document.querySelector('.burger-menu');
   burgerMenu.addEventListener('click', app.animationBurgerMenu)
   
-  const aboutTitle = document.querySelector('.about .large-text-title');
+  const aboutTitle = document.querySelector('.large-text-title-right');
   window.onscroll = () => {
     let pos = window.scrollY - 100;
     aboutTitle.style.left = `${pos}px`;
-
   }
 
   const experienceListElms = document.querySelectorAll('.experience-content-name_list .list-element');
   experienceListElms.forEach(item => { item.addEventListener('click', app.displayExperience)});
-  
+
+
   }, 
 
 // Animation of burger Menu
@@ -32,13 +32,29 @@ const app = {
 
   },
 
+// Animation experience
   displayExperience(event) {
     const list = event.currentTarget;
     const listActive =  document.querySelector('.list-element.active');
-    console.log(listActive);
+    const activeDataId = listActive.getAttribute('data-id');
+    const actifParagraph = document.getElementById(`project-${activeDataId}`);
+    console.log(actifParagraph);
+
     listActive.classList.remove('active');
     list.classList.add('active');
-  }
+
+    const dataId = list.getAttribute('data-id');
+    const textProject = document.getElementById(`project-${dataId}`);
+
+    actifParagraph.classList.remove('active');
+    // Insert active class for my paragraph
+    textProject.classList.add('active');
+
+    actifParagraph.classList.add('hidden');
+    // Remove hidden class
+    textProject.classList.remove('hidden');
+  },
+
 }
 
 

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +17,12 @@
   <!--Header with Logo and Burger Menu-->
   <header class="header">
     <img src="img/Logo.svg" alt="Logo Portfolio Laurie">
+    <div class="switch-theme">
+      <span data-id="1" class="switch-dark active">Dark</span>
+      <input type="checkbox" class="toggle">
+      <span data-id="2" class="switch-ligth">Light</span>
+    </div>
+
     <div class="burger-menu">
       <span></span>
       <span></span>
@@ -22,6 +30,7 @@
     </div>
     </header>
   <!-- End Header-->
+  
   <div id="overlay_open">  
     <nav id="menu-burger-nav" class="overlay">
       <a href="#">About</a>
@@ -91,7 +100,7 @@
 
     <!--Section About-->
     <section class="about">
-      <div class="large-text-title">About</div>
+      <div class="large-text-title-right">About</div>
         <div class="about-image">
         <div class="about-rectangle"></div>
         <img src="img/laurie-musson.jpg" alt="Laurie Musson">
@@ -101,7 +110,7 @@
           <h2 class="title">A propos</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer id metus quis erat pharetra blandit.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer id metus quis erat pharetra blandit.</p>
-        </div> -->
+        </div>
 
             
      </section>
@@ -109,35 +118,28 @@
 
     <!--Section Experience-->
     <section class="experience">
-      <!-- <div class="large-text-title">Experience</div> -->
       <h2 class="title">Expériences</h2>
-
-      <div class="experience-switch">
-        <span class="experience-switch-school active">Formation</span>
-        <input type="checkbox" class="toggle">
-        <span class="experience-switch-enterprise">Entreprise</span>
-      </div>
 
       <div class="experience-content">
         <div class="experience-content-name">
           <ul class="experience-content-name_list">
 
-            <li class="list-element active" id="">
+            <li class="list-element active" data-id="1">
               <h3>Développement web</h3>
               <span>O'clock</span>
             </li>
 
-            <li class="list-element">
+            <li class="list-element" data-id="2">
               <h3>E-commerce</h3>
               <span>Université Créteil</span>
             </li>
 
-            <li class="list-element">
+            <li class="list-element" data-id="3">
               <h3>Webmaster</h3>
               <span>Ecole ITIC</span>
             </li>
 
-            <li class="list-element">
+            <li class="list-element" data-id="4">
               <h3>Management des unités commerciales</h3>
               <span>Ecole ITIC</span>
             </li>
@@ -145,7 +147,9 @@
         </div>
 
         <div class="experience-content-description">
-          <div class="experience-content-description-text">
+
+          <!--Project 1 O'clock-->
+          <div class="experience-content-description-text active" id="project-1">
             <span class="experience-title">Développement web</span>
             <span class="experience-place"><strong>Ecole O'clock</strong> - Septembre 2022 à Mars 2023</span>
             <p class="experience-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. 
@@ -154,10 +158,46 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer 
               id metus quis erat pharetra blandit.</p>
           </div>
+           <!--Fin Project 1 O'clock-->
+
+           <!--Project 2 Master-->
+           <div class="experience-content-description-text hidden" id="project-2">
+            <span class="experience-title">Master blabla</span>
+            <span class="experience-place"><strong>Ecole O'clock</strong> - Septembre 2022 à Mars 2023</span>
+            <p class="experience-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. 
+              Integer id metus quis erat pharetra blandit. <br><br>
+            
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer 
+              id metus quis erat pharetra blandit.</p>
+          </div>
+           <!--Fin Project 2 Master-->
+
+           <!--Project 3 Webmaster-->
+           <div class="experience-content-description-text hidden" id="project-3">
+            <span class="experience-title">Webmaster blabla</span>
+            <span class="experience-place"><strong>Ecole O'clock</strong> - Septembre 2022 à Mars 2023</span>
+            <p class="experience-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. 
+              Integer id metus quis erat pharetra blandit. <br><br>
+            
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer 
+              id metus quis erat pharetra blandit.</p>
+          </div>
+           <!--Fin Project 3 Webmaster-->
+
+           <!--Project 4 Muc-->
+           <div class="experience-content-description-text hidden" id="project-4">
+            <span class="experience-title">Muc</span>
+            <span class="experience-place"><strong>Ecole O'clock</strong> - Septembre 2022 à Mars 2023</span>
+            <p class="experience-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. 
+              Integer id metus quis erat pharetra blandit. <br><br>
+            
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer 
+              id metus quis erat pharetra blandit.</p>
+          </div>
+           <!--Fin Project 4 Muc-->
           <div class="experience-content-description-rectangle"></div>
         </div>
       </div>
-
             
      </section>
      <!--End Experience-->

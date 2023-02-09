@@ -3,6 +3,9 @@
   src: url("../fonts/MarkPro-Heavy.woff") format('woff');
 }
 
+.main-home {
+  overflow: hidden;
+}
 
 body {
   background:#10101A;
@@ -379,8 +382,9 @@ justify-content: center;
   justify-content: space-between;
 }
 
-.about .large-text-title {
+.large-text-title-right {
   position:absolute;
+  top:140px;
   font-family:'MarkPro', sans-serif;
   font-size:clamp(3rem, 25vw, 16rem);
   opacity:0.2;
@@ -431,17 +435,9 @@ justify-content: center;
 
 .experience {
   margin-top:10rem;
+  position:relative;
 }
 
-.experience .large-text-title {
-  position: absolute;
-  right:-135rem;
-  font-family:'MarkPro', sans-serif;
-  font-size:clamp(3rem, 25vw, 25rem);
-  opacity:0.2;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
 
 .experience .title {
   background: linear-gradient(90deg, #B0F3F1 0%, #FFCFDF 50.42%);
@@ -459,8 +455,12 @@ justify-content: center;
   text-transform:uppercase;
 }
 
-.experience-switch .active {
+.experience-switch span.active {
   font-weight:bold;
+}
+
+.experience-switch-type  {
+  cursor:pointer;
 }
 
 input[type="checkbox"] {
@@ -511,19 +511,15 @@ input[type="checkbox"] {
 
 }
 
-.experience-content-name_list {
-  border-left: 1px solid #D9D9D9;
-  padding-left: 20px;
-}
 
 .list-element {
   color:rgba(255, 255, 255, 0.55);
-  padding-bottom:40px;
+  padding: 10px 0 20px 0;
+  cursor:pointer;
+  border-left:1px solid #D9D9D9;
+  padding-left: 20px;
 }
 
-.list-element:last-child {
-  padding-bottom:10px;
-}
 
 .list-element h3 {
   font-size:1.1rem;
@@ -536,6 +532,11 @@ input[type="checkbox"] {
 
 .list-element.active {
   position:relative;
+  border-left:2px solid #B0F3F1;
+  -webkit-transition: border .2s,-webkit-box-shadow .4s;
+  transition: border .2s,-webkit-box-shadow .4s;
+  transition: border .2s,box-shadow .4s;
+  transition: border .2s,box-shadow .4s,-webkit-box-shadow .4s;
 }
 
 .list-element.active h3 {
@@ -548,13 +549,6 @@ input[type="checkbox"] {
   font-weight:60O;
 }
 
-.list-element.active::before {
-  content:"";
-  border-left:2px solid #B0F3F1;
-  height:45px;
-  position:absolute;
-  left:-21px;
-}
 
 .experience-content-description-text {
   background:white;
@@ -602,6 +596,10 @@ input[type="checkbox"] {
   position:absolute;
   right:-70px;
   top:-40px;
+}
+
+.hidden {
+  display:none;
 }
 
 footer .copyright {
