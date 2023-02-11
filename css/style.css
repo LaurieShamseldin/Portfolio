@@ -3,6 +3,12 @@
   src: url("../fonts/MarkPro-Heavy.woff") format('woff');
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 .main-home {
   overflow: hidden;
 }
@@ -10,22 +16,29 @@
 .theme-light {
   --color-primary: white;
   --color-secondary: #10101A;
-  --color-accent: #fd6f53;
-  --font-color: #000000;
+  --color-light: #10101A;
+  --color-footer:#d7d7e7;
 }
 
 .theme-dark {
   --color-primary: #10101A;
   --color-secondary: white;
-  --color-accent: #12cdea;
-  --font-color: #ffffff;
+  --color-light: #ffffffbd;
+  --color-footer:#232337;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background:var(--color-primary);
   color:var(--color-secondary);
   font-family: 'Maven Pro', sans-serif;
+}
 
+a {
+  text-decoration:none;
 }
 
 .header {
@@ -33,6 +46,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 25px;
+}
+
+.header-logo path:nth-child(2) {
+  fill:var(--color-secondary);
+}
+
+.header-right {
+  display:flex;
+  align-items: center;
+  column-gap:4rem;
 }
 
 .burger-menu {
@@ -141,7 +164,7 @@ justify-content: center;
 }
 
 #menu-burger-nav a {
-  color : white;
+  color : var(--color-secondary);
   text-decoration:none;
   font-family : 'Maven Pro', sans-serif;
   text-transform: uppercase;
@@ -153,7 +176,7 @@ justify-content: center;
 }
 
 #menu-burger-nav a:hover {
-  border-bottom: 1px solid white;    
+  border-bottom: 1px solid var(--color-secondary);
 }
 
 
@@ -175,9 +198,10 @@ justify-content: center;
   margin-bottom:30px;
 }
 
-.social-media img {
-  width:25px;
+.social-media svg path{
+  stroke:var(--color-secondary);
 }
+
 
 .social-media::after, .email::after {
   content:"";
@@ -185,7 +209,7 @@ justify-content: center;
   margin:0 auto;
   width:1px;
   height:100px;
-  background-color:white;
+  background-color:var(--color-secondary);
 
 }
 
@@ -199,7 +223,7 @@ justify-content: center;
 }
 
 .email a {
-  color:white;
+  color:var(--color-secondary);
   text-decoration:none;
   writing-mode: vertical-rl;
   margin:0 auto;
@@ -209,7 +233,7 @@ justify-content: center;
 
 .tags-site {
   font-family: 'Bad Script', cursive;
-  color: #ffffffbd;
+  color: var(--color-light);
   font-size: 1rem;
   margin-right:10px;
 }
@@ -226,7 +250,7 @@ justify-content: center;
 .presentation-title::before {
   content: '<h1>';
   font-family: 'Bad Script', cursive;
-  color: #ffffffbd;
+  color:var(--color-light);
   font-size: 0.9rem;
   margin-left:-35px;
   margin-right:10px;
@@ -235,7 +259,7 @@ justify-content: center;
 .presentation-title p:last-of-type::after {
   content: '</h1>';
   font-family: 'Bad Script', cursive;
-  color: #ffffffbd;
+  color: var(--color-light);
   font-size: 0.9rem;
   margin-left: 1rem;
 }
@@ -311,7 +335,7 @@ justify-content: center;
 .presentation-job::before {
   content: '<h2>';
   font-family: 'Bad Script', cursive;
-  color: #ffffffbd;
+  color: var(--color-light);
   margin-left:-35px;
   font-size: 1rem;
   margin-right:10px;
@@ -320,20 +344,20 @@ justify-content: center;
 .presentation-job::after {
   content: '</h2>';
   font-family: 'Bad Script', cursive;
-  color: #ffffffbd;
+  color: var(--color-light);
   font-size: 1rem;
   margin-left:10px;
 }
 
 .presentation-paragraph {
   padding-top:30px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-light);
 }
 
 .presentation-paragraph::before {
   content: '<p>';
   font-family: 'Bad Script', cursive;
-  color: #ffffffbd;
+  color:var(--color-light);
   margin-left:-35px;
   font-size: 1rem;
   margin-right:10px;
@@ -342,7 +366,7 @@ justify-content: center;
 .presentation-paragraph::after {
   content: '</p>';
   font-family: 'Bad Script', cursive;
-  color: #ffffffbd;
+  color: var(--color-light);
   font-size: 1rem;
   margin-left:10px;
 }
@@ -351,9 +375,9 @@ justify-content: center;
   margin-top:30px;
   width:200px;
   height:50px;
-  background:white;
+  background:var(--color-secondary);
   border:none;
-  color:10101A;
+  color:var(--color-primary);
   font-size:1rem;
   font-family:'MarkPro', sans-serif;
   text-transform: uppercase;
@@ -454,7 +478,7 @@ justify-content: center;
 
 
 .experience .title {
-  background: linear-gradient(90deg, #B0F3F1 0%, #FFCFDF 50.42%);
+  background: linear-gradient(90deg, #B0F3F1 20%, #FFCFDF 26.42%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -496,7 +520,7 @@ input[type="checkbox"] {
   display: inline-block;
   position: relative;
   margin: 0 10px 0 10px;
-  background: white;
+  background: var(--color-secondary);
   transition: all .2s ease;
   vertical-align: middle;
 }
@@ -509,7 +533,7 @@ input[type="checkbox"] {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #10101A;
+  background: var(--color-primary);
   box-shadow: 0 1px 2px rgba(44,44,44,.2);
   transition: all .2s cubic-bezier(.5,.1,.75,1.35);
 }
@@ -525,15 +549,13 @@ input[type="checkbox"] {
 
 }
 
-
 .list-element {
-  color:rgba(255, 255, 255, 0.55);
+  color: var(--color-light);
   padding: 10px 0 20px 0;
   cursor:pointer;
   border-left:1px solid #D9D9D9;
   padding-left: 20px;
 }
-
 
 .list-element h3 {
   font-size:1.1rem;
@@ -559,15 +581,14 @@ input[type="checkbox"] {
 }
 
 .list-element.active span {
-  color:white;
-  font-weight:60O;
+  color: var(--color-secondary);
+  font-weight:700;
 }
 
-
 .experience-content-description-text {
-  background:white;
+  background:var(--color-secondary);
   position:relative;
-  color:#10101A;
+  color:var(--color-primary);
   width: 450px;
   margin-left:60px;
   padding:60px 30px 60px 30px;
@@ -623,7 +644,7 @@ input[type="checkbox"] {
 
 .skills .title {
   text-align:center;
-  background: linear-gradient(132deg, #B0F3F1 8%, #FFCFDF 85.42%);
+  background: linear-gradient(132deg, #B0F3F1 32%, #FFCFDF 64.42%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -645,7 +666,7 @@ input[type="checkbox"] {
   width: 127px;
   height: 127px;
   border-radius:100px;
-  background: linear-gradient(#10101A,#10101A) padding-box,
+  background: linear-gradient(var(--color-primary),var(--color-primary)) padding-box,
               linear-gradient(to right, #B0F3F1, #FFCFDF) border-box;
   border-radius: 50em;
   border: 4px solid transparent;
@@ -662,7 +683,7 @@ input[type="checkbox"] {
 .projects .title {
   margin-bottom:20px;
   text-align:center;
-  background: linear-gradient(132deg, #B0F3F1 8%, #FFCFDF 85.42%);
+  background: linear-gradient(132deg, #B0F3F1 32%, #FFCFDF 64.42%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -700,7 +721,7 @@ input[type="checkbox"] {
 }
 
 .project-element.element-3 {
-  background:white;
+  background:var(--color-secondary);
 }
 
 .projects-element-header {
@@ -720,7 +741,7 @@ input[type="checkbox"] {
 }
 
 .project-element.element-3 .project-number, .project-element.element-3 .project-name {
-  color:#10101A;
+  color:var(--color-primary);
 }
 
 .project-element img {
@@ -743,8 +764,8 @@ input[type="checkbox"] {
 }
 
 .project-element.element-3 button {
-  background:#10101A;
-  color:white;
+  background:var(--color-primary);
+  color:var(--color-secondary);
 }
 
 .project-element button:hover {
@@ -765,41 +786,73 @@ input[type="checkbox"] {
 }
 
 .project-langage li {
-  background:#10101A;
-  color:white;
+  background:var(--color-primary);
+  color:var(--color-secondary);
   padding: 8px 15px 8px 15px;
   font-size:0.8rem;
   border-radius:20px;
   margin-left:5px;
 }
 
+.contact-text h2 {
+  margin-top: 10rem;
+  text-align:center;
+  font-family: 'Mark Pro';
+  font-size: 4.3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(85deg, #B0F3F1 49%, #FFCFDF 68.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.contact-paragraph {
+  margin-top:2rem;
+  text-align:center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color:var(--color-secondary);
+  letter-spacing: -.06em;
+}
+
+.contact-paragraph a {
+  background: linear-gradient(90deg, #B0F3F1 60%, #FFCFDF 102.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight:800;
+}
+
+.contact-social {
+  display:flex;
+  justify-content: center;
+  column-gap: 2rem;
+  margin-top:1.5rem;
+  margin-bottom:5rem;
+}
+
+footer {
+  position:relative;
+}
+
 footer .copyright {
+  margin-bottom:2rem;
   text-align:center;
   font-family: 'Maven Pro', sans-serif;
-  font-weight:bold;
+  font-weight:500;
 }
 
-.download-cv {
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width: 80px;
-  height:80px;
-  border-radius:50px;
-  background:white;
-  color:#10101A;
-  text-align:center;
+footer .copyright::after {
+  content:"";
+  display:flex;
+  width:205px;
+  height:10px;
+  background:var(--color-footer);
+  margin: -8px auto;
 }
-/* 
-footer .copyright::before {
-  position: absolute;
-  left: 576px;
-  top: 4697px;
-  width: 289px;
-  height: 14px;
-  background:red;
-} */
-
     
 /* Responsive */
 @media (min-width: 768px) {

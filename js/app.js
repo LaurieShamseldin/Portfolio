@@ -8,6 +8,23 @@ const app = {
 
   const burgerMenu = document.querySelector('.burger-menu');
   burgerMenu.addEventListener('click', app.animationBurgerMenu)
+
+  const linksMenu = document.querySelectorAll('#menu-burger-nav a');
+  linksMenu.forEach(item => { item.addEventListener('click', app.animationBurgerMenu)});
+
+  const themeSwitch = document.querySelector('.switch-theme input');
+  let darkTheme = true;
+  themeSwitch.addEventListener('click', () => {
+    if (darkTheme) {
+      document.body.classList.remove('theme-dark');
+      document.body.classList.add('theme-light');
+      darkTheme = false;
+    } else { 
+      document.body.classList.remove('theme-light');
+      document.body.classList.add('theme-dark');
+      darkTheme = true;
+    }
+  });
   
   const aboutTitle = document.querySelector('.large-text-title-right');
   window.onscroll = () => {
@@ -67,6 +84,7 @@ const app = {
     // Remove hidden class
     textProject.classList.remove('hidden');
   },
+  
 
 }
 

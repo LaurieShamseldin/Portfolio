@@ -16,32 +16,44 @@
     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
   />
 </head>
-<body class="theme-dark ">
+<body class="theme-dark">
 
   <!--Header with Logo and Burger Menu-->
   <header class="header">
-    <img src="img/Logo.svg" alt="Logo Portfolio Laurie">
-    <div class="switch-theme">
-      <span data-id="1" class="switch-dark active">Dark</span>
-      <input type="checkbox" class="toggle">
-      <span data-id="2" class="switch-ligth">Light</span>
-    </div>
+    <svg width="97" height="109" viewBox="0 0 97 109" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-logo">
+      <path d="M59.5779 34.363C66.3099 36.145 77.3979 33.967 79.8729 36.541C82.4469 39.115 76.5069 46.441 70.8639 50.698C65.3199 54.856 60.0729 55.846 58.0929 61.687C56.2119 67.627 57.4989 78.319 55.7169 79.309C53.8359 80.299 48.8859 71.587 43.5399 68.122C38.1939 64.756 32.5509 66.538 28.5909 65.152C24.7299 63.766 22.5519 59.014 19.8789 53.272C17.1069 47.431 13.7409 40.501 15.0279 34.759C16.3149 29.116 22.1559 24.661 28.2939 22.582C34.5309 20.503 40.9659 20.701 45.5199 23.77C50.0739 26.74 52.7469 32.482 59.5779 34.363Z" fill="url(#paint0_linear_43_295)"/>
+      <path d="M87.6 77.6V90H46.08V34H59.44V77.6H87.6Z" fill="white"/>
+      <defs>
+      <linearGradient id="paint0_linear_43_295" x1="14.7451" y1="21.2103" x2="82.0842" y2="21.2103" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B0F3F1"/>
+      <stop offset="1" stop-color="#FFCFDF"/>
+      </linearGradient>
+      </defs>
+    </svg>
 
-    <div class="burger-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="header-right">
+      <div class="switch-theme">
+        <span class="switch-dark active">Dark</span>
+        <input type="checkbox" class="toggle">
+        <span class="switch-ligth">Light</span>
+      </div>
+
+      <div class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
     </header>
   <!-- End Header-->
   
   <div id="overlay_open">  
     <nav id="menu-burger-nav" class="overlay">
-      <a href="#">A propos</a>
-      <a href="#">Expériences</a>
-      <a href="#">Compétences</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact</a>
+      <a href="#about">A propos</a>
+      <a href="#experience">Expériences</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
   
@@ -50,12 +62,26 @@
     <ul class="social-media">
       <li>
         <a href="#">
-          <img src="img/git-hub.svg" alt="Git Hub">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5_39)">
+            <path d="M9 18.9999C4 20.4999 4 16.4999 2 15.9999M16 21.9999V18.1299C16.0375 17.6531 15.9731 17.1737 15.811 16.7237C15.6489 16.2737 15.3929 15.8634 15.06 15.5199C18.2 15.1699 21.5 13.9799 21.5 8.51994C21.4997 7.12376 20.9627 5.78114 20 4.76994C20.4559 3.54844 20.4236 2.19829 19.91 0.999938C19.91 0.999938 18.73 0.649938 16 2.47994C13.708 1.85876 11.292 1.85876 9 2.47994C6.27 0.649938 5.09 0.999938 5.09 0.999938C4.57638 2.19829 4.54414 3.54844 5 4.76994C4.03013 5.78864 3.49252 7.1434 3.5 8.54994C3.5 13.9699 6.8 15.1599 9.94 15.5499C9.611 15.8899 9.35726 16.2953 9.19531 16.7399C9.03335 17.1844 8.96681 17.658 9 18.1299V21.9999" stroke="white" stroke-opacity="0.63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_5_39">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
         </a>
       </li>
       <li>
         <a href="#">
-          <img src="img/linkedin.svg" alt="Linkedin">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="white" stroke-opacity="0.63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 9H2V21H6V9Z" stroke="white" stroke-opacity="0.63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="white" stroke-opacity="0.63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
         </a>
       </li>
     </ul>
@@ -64,11 +90,11 @@
 
 
    <!--Bloc fix with Email-->
-   <!-- <div class="right-email">
+   <div class="right-email">
     <div class="email">
       <a href="mailto:laurie.musson@hotmail.fr">laurie.musson@hotmail.fr</a>
     </div>
-  </div> -->
+  </div>
   <!-- End Bloc with Email -->
 
   <main class="main-home">
@@ -96,13 +122,13 @@
           pharetra blandit.
         </p>
 
-        <button class="presentation-button"><span>Me contacter</span></button>
+        <a href="#contact"><button class="presentation-button"><span>Me contacter</span></button></a>
       </div>
     </section>
     <!--End Presentation-->
 
     <!--Section About-->
-    <section class="about">
+    <section class="about" id="about">
       <div class="large-text-title-right">About</div>
         <div class="about-image">
         <div class="about-rectangle"></div>
@@ -113,14 +139,12 @@
           <h2 class="title">A propos</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer id metus quis erat pharetra blandit.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien libero, luctus tempor purus id, ornare iaculis nulla. Integer id metus quis erat pharetra blandit.</p>
-        </div>
-
-            
+        </div> 
      </section>
      <!--End About-->
 
     <!--Section Experience-->
-    <section class="experience">
+    <section class="experience" id="experience">
       <h2 class="title">Expériences</h2>
 
       <div class="experience-content">
@@ -206,7 +230,7 @@
      <!--End Experience-->
 
     <!--Section Skills-->
-    <section class="skills">
+    <section class="skills" id="skills">
       <h2 class="title">Compétences</h2>
       <div class="large-text-title-center">Skills</div>
        
@@ -225,7 +249,7 @@
      <!--End Skills-->
 
     <!--Section Projects-->
-    <section class="projects">
+    <section class="projects" id="projects">
       <h2 class="title">Portfolio</h2> 
       
       <div #swiperRef="" class="swiper mySwiper">
@@ -296,9 +320,49 @@
     </section>
     <!--End Projects-->
 
+    <!--Section Contact-->
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Restons en contact.  </h2>
+        </div>
+          <p class="contact-paragraph"> 
+            Vous avez une question ou une proposition, ou vous voulez simplement
+            me dire bonjour? <br>
+            Envoyez moi un <a href="mailto:laurie.musson@hotmail.fr">email</a> ou contactez moi sur les réseaux sociaux.
+          </p>
+
+          <div class="contact-social">
+            <div class="contact-social-github">
+              <a href="#">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_5_39)">
+                  <path d="M9 18.9999C4 20.4999 4 16.4999 2 15.9999M16 21.9999V18.1299C16.0375 17.6531 15.9731 17.1737 15.811 16.7237C15.6489 16.2737 15.3929 15.8634 15.06 15.5199C18.2 15.1699 21.5 13.9799 21.5 8.51994C21.4997 7.12376 20.9627 5.78114 20 4.76994C20.4559 3.54844 20.4236 2.19829 19.91 0.999938C19.91 0.999938 18.73 0.649938 16 2.47994C13.708 1.85876 11.292 1.85876 9 2.47994C6.27 0.649938 5.09 0.999938 5.09 0.999938C4.57638 2.19829 4.54414 3.54844 5 4.76994C4.03013 5.78864 3.49252 7.1434 3.5 8.54994C3.5 13.9699 6.8 15.1599 9.94 15.5499C9.611 15.8899 9.35726 16.2953 9.19531 16.7399C9.03335 17.1844 8.96681 17.658 9 18.1299V21.9999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_5_39">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+
+            <div class="contact-social-linkedin">
+              <a href="#">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 9H2V21H6V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+              </a>
+            </div>
+          </div>
+
+    </section>
+     <!--End Contact-->
+
   </main>
 
-  <div class="download-cv">CV</div>
   <footer>
     <div class="copyright">© Laurie Musson - Portfolio</div>
   </footer>
