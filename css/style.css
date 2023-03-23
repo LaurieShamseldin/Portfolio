@@ -223,6 +223,9 @@ justify-content: center;
   stroke:var(--color-secondary);
 }
 
+.svg-cv {
+  opacity: 0.63;
+}
 
 .social-media::after, .email::after {
   content:"";
@@ -443,9 +446,9 @@ justify-content: center;
 }
 
 .large-text-title-right {
+  font-family:'MarkPro', sans-serif;
   position:absolute;
   top:140px;
-  font-family:'MarkPro', sans-serif;
   font-size:clamp(3rem, 25vw, 16rem);
   opacity:0.1;
   letter-spacing: 0.1em;
@@ -671,6 +674,7 @@ input[type="checkbox"] {
 }
 
 .skills .title {
+  font-family:'MarkPro', sans-serif;
   text-align:center;
   background: linear-gradient(132deg, #B0F3F1 32%, #FFCFDF 64.42%);
   -webkit-background-clip: text;
@@ -709,6 +713,7 @@ input[type="checkbox"] {
 }
 
 .projects .title {
+  font-family:'MarkPro', sans-serif;
   margin-bottom:20px;
   text-align:center;
   background: linear-gradient(132deg, #B0F3F1 32%, #FFCFDF 64.42%);
@@ -825,6 +830,7 @@ input[type="checkbox"] {
 }
 
 .contact-text h2 {
+  font-family:'MarkPro', sans-serif;
   margin-top: 10rem;
   text-align:center;
   font-family: 'Mark Pro';
