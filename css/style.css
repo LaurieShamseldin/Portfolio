@@ -888,6 +888,10 @@ footer .copyright::after {
   background:var(--color-footer);
   margin: -8px auto;
 }
+
+.contact-social-github path, .contact-social-linkedin path, .contact-social-cv path {
+  fill:var(--color-secondary);
+}
     
 /* Responsive */
 
@@ -1013,6 +1017,10 @@ footer .copyright::after {
   } 
   
   .project-element button {
-    width: 95%;
+    width: 90%;
+  }
+
+  .large-text-title-right {
+    top:1px;
   }
 }
