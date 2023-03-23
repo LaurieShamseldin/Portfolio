@@ -483,7 +483,7 @@ justify-content: center;
 }
 
 .title {
-  font-family: 'Mark Pro';
+  font-family:'Maven Pro', sans-serif;
   font-size:4.3rem;
   text-transform: uppercase;
   font-weight: 800;
@@ -508,7 +508,7 @@ justify-content: center;
 
 
 .experience .title {
-  background: linear-gradient(90deg, #B0F3F1 20%, #FFCFDF 26.42%);
+  background: linear-gradient(90deg, #B0F3F1 20%, #FFCFDF 56.42%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -517,7 +517,7 @@ justify-content: center;
 
 .experience-switch {
   margin-top:20px;
-  font-weight:'Maven Pro', sans-serif;
+  font-family:'Maven Pro', sans-serif;
   font-size:1rem;
   letter-spacing:0.1rem;
   text-transform:uppercase;
@@ -1004,5 +1004,14 @@ footer .copyright::after {
   .experience {
     margin-top:5rem;
   }
+
+  .contact-text h2 {
+    font-size:3rem;
+    margin-left:1rem;
+    margin-right:1rem;
+  } 
   
+  .project-element button {
+    width: 100%
+  }
 }

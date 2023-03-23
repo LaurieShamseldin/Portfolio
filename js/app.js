@@ -36,9 +36,9 @@ const app = {
   experienceListElms.forEach(item => { item.addEventListener('click', app.displayExperience)});
 
   const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.5,
+    slidesPerView: 1.2,
     centeredSlides: false,
-    spaceBetween: 30,
+    spaceBetween: 15,
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -51,6 +51,7 @@ const app = {
     breakpoints: {
       1000: {
         slidesPerView: 2.5,
+        spaceBetween: 30,
       },
 
     },
