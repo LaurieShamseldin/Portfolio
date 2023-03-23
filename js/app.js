@@ -30,13 +30,13 @@ const app = {
   window.onscroll = () => {
     let pos = window.scrollY - 100;
     aboutTitle.style.left = `${pos}px`;
-  }
+  };
 
   const experienceListElms = document.querySelectorAll('.experience-content-name_list .list-element');
   experienceListElms.forEach(item => { item.addEventListener('click', app.displayExperience)});
 
   const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1.5,
     centeredSlides: false,
     spaceBetween: 30,
     pagination: {
@@ -47,7 +47,25 @@ const app = {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
+    breakpoints: {
+      1000: {
+        slidesPerView: 2.5,
+      },
+
+    },
   });
+
+  // Display Contact
+  const displayContact = document.querySelector('.slide-in');
+
+  window.addEventListener('scroll', () => {
+    const {scrollTop, clientHeight} = document.documentElement;
+    const topElementToTopViewport = displayContact.getBoundingClientRect().top;
+    if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.8){
+      displayContact.classList.add('active')
+    }
+  })
 
   }, 
 
@@ -85,11 +103,6 @@ const app = {
     textProject.classList.remove('hidden');
   },
   
-
 }
 
-
-
 document.addEventListener('DOMContentLoaded', app.init);
-
-
